@@ -3,7 +3,7 @@
  * @returns {JSX}
  */
 const Login = () => {
-    return <div> HERE GOES THE LOGIN </div>;
+    return <div> HERE GOES!!</div>;
   };
   
   export { Login };
