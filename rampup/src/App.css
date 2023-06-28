@@ -1,4 +1,97 @@
 .App {
   text-align: center;
-  background-color: cornflowerblue;
+  background-color: rgb(169, 87, 93);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #5c374a89;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-message {
+  margin-top: -5px;
+}
+
+.form label {
+  margin-right: 15px;
+}
+
+.form input {
+  margin-top: 5px;
+}
+
+.form button {
+  margin-top: 10px;
+  align-items: center;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  text-align: center;
+}
+
+.buttons button[type='submit']:hover:not(:disabled) {
+  background-color: rgb(169, 87, 93);
+  color: white;
+}
+
+.back-button {
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: rgb(169, 87, 93);
+  color: white;
+}
+
+.create-account-button:hover {
+  background-color: rgb(169, 87, 93);
+  color: white;
+}
+
+.create-account-button {
+  text-align: center;
+}
+
+.create-button {
+  text-align: center;
+}
+
+.create-button:hover:not(:disabled) {
+  background-color: rgb(169, 87, 93);
+  color: white;
+}
+
+.login-title {
+  text-align: right;
+  margin-right: 80px;
+}
+
+.container {
+  background-color: rgb(169, 87, 93);
+  padding: 1rem;
+  color: white;
 }
