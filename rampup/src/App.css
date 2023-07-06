@@ -18,7 +18,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: 1rem; 
   text-align: center;
 }
 
@@ -29,21 +29,22 @@
 }
 
 .error-message {
-  margin-top: -5px;
+  margin-top: 0.5rem;
 }
 
 .form label {
-  margin-right: 15px;
+  margin-right: 0.9375rem; 
 }
 
 .form input {
-  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 
 .form button {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   align-items: center;
 }
+
 
 .buttons {
   text-align: center;
@@ -87,7 +88,7 @@
 
 .login-title {
   text-align: right;
-  margin-right: 80px;
+  margin-right: 5rem;
 }
 
 .container {

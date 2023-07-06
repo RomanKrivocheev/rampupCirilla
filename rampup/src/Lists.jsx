@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import RegisterForm from './Register';
+import './Lists.css';
 
 function Lists({ username }) {
   const [people, setPeople] = useState([]);
@@ -25,12 +24,6 @@ function Lists({ username }) {
     setNewPerson({ name: '', lastName: '', age: '', dni: '' });
   };
 
-  const handleEditPerson = (index) => {
-    setEditMode(true);
-    setEditIndex(index);
-    setNewPerson(people[index]);
-  };
-
   const handleUpdatePerson = () => {
     const updatedPeople = [...people];
     updatedPeople[editIndex] = newPerson;
@@ -38,12 +31,6 @@ function Lists({ username }) {
     setNewPerson({ name: '', lastName: '', age: '', dni: '' });
     setEditMode(false);
     setEditIndex(null);
-  };
-
-  const handleDeletePerson = (index) => {
-    const updatedPeople = [...people];
-    updatedPeople.splice(index, 1);
-    setPeople(updatedPeople);
   };
 
   const handleDeletePersonByDNI = () => {
@@ -61,16 +48,6 @@ function Lists({ username }) {
         person.dni.includes(e.target.value)
       );
       setDisplayedPeople(filteredPeople);
-    }
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      if (editMode) {
-        handleUpdatePerson();
-      } else {
-        handleSavePerson();
-      }
     }
   };
 
@@ -140,7 +117,7 @@ function Lists({ username }) {
       </div>
 
       <div>
-        <strong style={{ fontWeight: 'bold' }}>Delete person by DNI:</strong>
+        <strong className='label'>Delete person by DNI:</strong>
         <br />
         <div>
           <input
@@ -157,7 +134,7 @@ function Lists({ username }) {
       </div>
 
       <div>
-        <strong style={{ fontWeight: 'bold' }}>Search person by DNI:</strong>
+        <strong className='label'>Search person by DNI:</strong>
         <br />
         <div>
           <input type='text' value={searchTerm} onChange={handleSearch} />
@@ -168,19 +145,19 @@ function Lists({ username }) {
         <table>
           <thead>
             <tr>
-              <th style={{ paddingRight: '1cm' }}>Name</th>
-              <th style={{ paddingRight: '1cm' }}>Last Name</th>
-              <th style={{ paddingRight: '1cm' }}>Age</th>
-              <th style={{ paddingRight: '1cm' }}>DNI</th>
+              <th className='table-header'>Name</th>
+              <th className='table-header'>Last Name</th>
+              <th className='table-header'>Age</th>
+              <th className='table-header'>DNI</th>
             </tr>
           </thead>
           <tbody>
             {displayedPeople.map((person, index) => (
               <tr key={index}>
-                <td style={{ textAlign: 'left' }}>{person.name}</td>
-                <td style={{ textAlign: 'left' }}>{person.lastName}</td>
-                <td style={{ textAlign: 'left' }}>{person.age}</td>
-                <td style={{ textAlign: 'left' }}>{person.dni}</td>
+                <td>{person.name}</td>
+                <td>{person.lastName}</td>
+                <td>{person.age}</td>
+                <td>{person.dni}</td>
               </tr>
             ))}
           </tbody>

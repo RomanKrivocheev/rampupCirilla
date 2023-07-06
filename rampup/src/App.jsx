@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
-import Login from './Login';
+import { LoginForm } from './Login';
 
+/**
+ * The main application component.
+ * Renders the login form.
+ */
 const App = () => {
   return (
     <div>
-      <Login />
+      <LoginForm />
     </div>
   );
 };
 
-export default App;
+export { App };
