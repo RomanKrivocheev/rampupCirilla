@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import RegisterForm from './Register';
-import Lists from './Lists';
+import { RegisterForm } from './Register';
+import { Lists } from './Lists'; // Importing Lists component as a named import
 
 /**
  * The login form component.
@@ -120,4 +120,4 @@ const LoginForm = () => {
   );
 };
 
-export {LoginForm };
+export { LoginForm };

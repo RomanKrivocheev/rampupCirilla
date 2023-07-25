@@ -8,7 +8,7 @@ import React, { useState } from 'react';
  * @param {Function} props.onBack - The function to handle going back.
  * @returns {JSX.Element} The rendered JSX element.
  */
-function RegisterForm({ onRegister, onBack }) {
+const RegisterForm = ({ onRegister, onBack }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -147,4 +147,4 @@ function RegisterForm({ onRegister, onBack }) {
   );
 }
 
-export default RegisterForm;
+export { RegisterForm };

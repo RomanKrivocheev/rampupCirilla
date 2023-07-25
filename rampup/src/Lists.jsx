@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Lists.css';
 
-function Lists({ username }) {
+const Lists = ({ username }) => {
   const [people, setPeople] = useState([]);
   const [newPerson, setNewPerson] = useState({
     name: '',
@@ -167,4 +167,4 @@ function Lists({ username }) {
   );
 }
 
-export default Lists;
+export { Lists }; // Exporting the Lists component as a named export
